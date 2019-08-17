@@ -1,0 +1,20 @@
+{
+"name" :"Main Square",
+"manifest_version" : 2,
+"version" : "1.1.0",
+"description" :"Acheter la place rapidement",
+"browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Click here!"
+},
+"permissions": [
+    "tabs", "https://www.ticketswap.fr/*"
+],
+"background": {
+    "scripts":["background.js"]
+},
+"content_scripts": [ {
+    "js": [ "jquery.min.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }]
+}
